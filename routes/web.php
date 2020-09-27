@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Admin\UsersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +15,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::prefix('admin')->name('admin')->group(function(){
+    Route::get('users',[UsersController::class,'index'])->name('.users.index');
+    Route::get('edit/',[UsersController::class,'edit'])->name('.edit.index');
+
 });
 
 Auth::routes();
