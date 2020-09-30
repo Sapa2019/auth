@@ -11,6 +11,6 @@
 <h1>Sapa</h1>
 <h1>Shirmadov</h1>
 <h1>Ashyrbayevich</h1>
-<h1>2501</h1>
+
 </body>
 </html>
