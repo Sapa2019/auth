@@ -33,7 +33,7 @@
                                     <td>{{$user->email}}</td>
                                     <td>
                                         <a href="{{route('admin.edit.index', $user->id)}}"><button type="button" class="btn btn-primary">Edit</button></a>
-                                        <button type="button" class="btn btn-warning">Delete</button>
+                                        <a href="{{route('admin.delete.index', $user->id)}}"><button type="button" class="btn btn-warning">Delete</button></a>
                                     </td>
                                 </tr>
                             @endforeach

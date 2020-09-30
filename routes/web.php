@@ -25,6 +25,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::prefix('admin')->name('admin')->group(function(){
     Route::get('users',[UsersController::class,'index'])->name('.users.index');
     Route::get('edit/',[UsersController::class,'edit'])->name('.edit.index');
+    Route::get('delete/',[UsersController::class,'delete'])->name('.delete.index');
+    Route::get('update/',[UsersController::class,'update'])->name('.update.index');
 
 });
 
