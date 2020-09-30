@@ -14,31 +14,16 @@
 {{--                        @endif--}}
 
 {{--                        {{ __('You are logged in!') }}--}}
-
-
-                        <table class="table table-bordered">
-                            <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Actions</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach($users as $user)
-                                <tr>
-                                    <th scope="row">{{$user->id}}</th>
-                                    <td>{{$user->name}}</td>
-                                    <td>{{$user->email}}</td>
-                                    <td>
-                                        <a href="{{route('admin.edit.index', $user->id)}}"><button type="button" class="btn btn-primary">Edit</button></a>
-                                        <button type="button" class="btn btn-warning">Delete</button>
-                                    </td>
-                                </tr>
+                        <form action="{{route('admin.users.update',$user)}}" method="POST">
+                            @csrf
+                            {{ method_field('PUT') }}
+                            @foreach($roles as $role)
+                                <div class="form-check">
+                                    <input type="checkbox" name="roles[]" value="{{$role->id}}">
+                                    <label>{{$role->name}}</label>
+                                </div>
                             @endforeach
-                            </tbody>
-                        </table>
+                        </form>
                     </div>
                 </div>
             </div>
