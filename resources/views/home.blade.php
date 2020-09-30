@@ -12,6 +12,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    Sapa Shirmadov
 
                     {{ __('You are logged in!') }}
                 </div>
