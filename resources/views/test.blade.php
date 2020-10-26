@@ -8,9 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Sapa</h1>
-<h1>Shirmadov</h1>
-<p>So Good</p>
 
 </body>
 </html>
